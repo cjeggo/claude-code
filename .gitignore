@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Claude Code auto-managed - never commit these
+.claude/projects/
+.claude/cache/
+.claude/plugins/
+*.local.json
+
+# Obsidian auto-managed
+.obsidian/
+
+# App-synced built-in skills - not our content
+skills/synced/

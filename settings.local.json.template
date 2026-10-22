@@ -1,0 +1,30 @@
+{
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "spinnerTipsEnabled": false,
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Bash(find {{HOME}}/Documents/Obsidian/*)",
+      "Bash(grep *)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "ExitPlanMode",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"{{HOME}}/.claude/hooks/plan-to-obsidian.sh\"",
+            "statusMessage": "Saving plan to Obsidian..."
+          }
+        ]
+      }
+    ]
+  }
+}
