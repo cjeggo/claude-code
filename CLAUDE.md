@@ -184,15 +184,15 @@ This is the central repo that owns all skills and agents. The scaffold is not pr
 **Sync rule:** Any skill or agent created or modified during this project, or any new plugin installed, must be synced back to the scaffold repo immediately - do not wait until session close. For plugins, add a row to this project's Plugins table and the equivalent tables in the scaffold's own CLAUDE.md and README.md. Push to GitHub after copying. This keeps the scaffold current across all machines and projects.
 
 ```shell
-# Copy a new or modified skill back to the scaffold
-cp -r .claude/skills/<skill-name>/ <scaffold-path>/skills/<skill-name>/
+# Write a generic copy of the skill or agent into the scaffold (never cp -r the project version)
+<scaffold-path>/skills/<skill-name>/SKILL.md
+<scaffold-path>/agents/<agent-name>.md
 
-# Copy a new or modified agent back to the scaffold
-cp .claude/agents/<agent-name>.md <scaffold-path>/agents/<agent-name>.md
-
-# Then commit and push
-cd <scaffold-path> && git add skills/ agents/ && git commit -m "add/update <name> from <project-name>" && git push
+# Update the README Structure tree and skills table, then commit and push
+cd <scaffold-path> && git add skills/ agents/ README.md && git commit -m "add/update <name>" && git push
 ```
+
+**The scaffold may be a public repo. Write every scaffold copy so it is publicly consumable.** No company, product or tenant names, no internal infrastructure (clusters, subscriptions, resource groups, repo paths, page IDs), no personal names or accounts, and no keys, tokens or internal GUIDs. Use placeholders such as `<scaffold-repo>` and `<project-root>`. Project-local copies in `.claude/skills/` may keep internal detail, so the two diverge by design. Skills that only work with a private local app stay out. Scan for internal terms and run a secret scanner before every push. Name skill files `SKILL.md` in uppercase.
 
 If the session ends before a sync has been pushed, flag it explicitly as a carry-over so it lands in harness memory: "scaffold sync outstanding: [skill/agent name]".
 
