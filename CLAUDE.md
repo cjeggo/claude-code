@@ -235,6 +235,7 @@ Skills are available globally via `~/.claude/skills/` symlink to `<scaffold-path
 | Terraform Private Endpoint Import | `/terraform-private-endpoint-import` | Importing a VNet-only (private endpoint) resource into Terraform state via the MR pipeline's network-connected runner and temporary `import {}` blocks |
 | Azure Hub Firewall Diagnostics | `/azure-hub-firewall-diagnostics` | Diagnosing silent outbound HTTPS failures from a spoke subnet - hub Azure Firewall IP-Group membership checklist |
 | AKS Bastion Live Access | `/aks-bastion-live-access` | Live kubectl access to a private AKS cluster via `az aks bastion` backgrounded tunnel + device-code sign-in |
+| Cortex K8s Scan Trigger | `/cortex-k8s-scan-trigger` | Force a Cortex Kubernetes connector host scan now and watch it complete |
 | CI RBAC Gap | `/ci-rbac-gap` | CI job fails with an Azure 403/401/RoleAssignmentExists - identity forensics, role-assignment-as-code change, manual-grant collision handling |
 | Terraform State Account Private-Only | `/terraform-state-account-private-only` | Make a state-backend storage account private-endpoint-only without breaking consumers |
 | VAP Live Verification | `/vap-live-verification` | Prove a ValidatingAdmissionPolicy denies on a live AKS cluster: scratch copy with failurePolicy Fail, server-side dry-run requests, parameter-not-found exposure, edit-propagation check, cleanup by recorded PID. |

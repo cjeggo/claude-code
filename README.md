@@ -64,6 +64,7 @@ claude-code/
     azure-hub-firewall-diagnostics/     <- diagnose silent outbound HTTPS failures from a spoke subnet (hub firewall IP-Group checklist)
     argocd-oci-chart-kv-credential/     <- ArgoCD OCI Helm chart with key-vault-synced repo credential (split-application pattern)
     aks-bastion-live-access/            <- live kubectl access to a private AKS cluster via az aks bastion tunnel
+    cortex-k8s-scan-trigger/            <- force and watch a Cortex Kubernetes connector host scan
     ci-rbac-gap/                        <- CI job Azure 403/401: identity forensics + role-assignment-as-code fix
     terraform-state-account-private-only/ <- make a Terraform state-backend storage account private-endpoint-only without breaking consumers
     defender-finding-triage/            <- triage Defender for Cloud recommendations: false positive, deliberate exception, or real fix
@@ -387,6 +388,7 @@ The `.gitignore` covers these but worth being explicit:
 | Azure Hub Firewall Diagnostics | `/azure-hub-firewall-diagnostics` | Diagnose silent outbound HTTPS failures from a spoke subnet (hub firewall IP-Group checklist) |
 | ArgoCD OCI Chart KV Credential | `/argocd-oci-chart-kv-credential` | Deploy a private OCI Helm chart via ArgoCD with a key-vault-synced credential; split-application pattern |
 | AKS Bastion Live Access | `/aks-bastion-live-access` | Live kubectl access to a private AKS cluster via `az aks bastion` backgrounded tunnel + device-code sign-in |
+| Cortex K8s Scan Trigger | `/cortex-k8s-scan-trigger` | Force a Cortex Kubernetes connector host scan now and watch it complete |
 | CI RBAC Gap | `/ci-rbac-gap` | CI job fails with an Azure 403/401/RoleAssignmentExists - identity forensics, role-assignment-as-code change, manual-grant collision handling |
 | Terraform State Account Private-Only | `/terraform-state-account-private-only` | Make a state-backend storage account private-endpoint-only without breaking consumers |
 | VAP Live Verification | `/vap-live-verification` | Prove a ValidatingAdmissionPolicy denies on a live AKS cluster: scratch copy with failurePolicy Fail, server-side dry-run requests, parameter-not-found exposure, edit-propagation check, cleanup by recorded PID. |
