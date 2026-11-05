@@ -62,6 +62,7 @@ claude-code/
     vault-memory-hygiene/          <- on-demand: orphaned/broken memory links, unarchived closed plans, one-directional backlinks
     terraform-private-endpoint-import/  <- import a VNet-only resource via the MR pipeline's network-connected runner
     azure-hub-firewall-diagnostics/     <- diagnose silent outbound HTTPS failures from a spoke subnet (hub firewall IP-Group checklist)
+    apt-stale-partial-index/            <- fix apt-get update 'unexpected size' failures caused by a stale partial index file
     argocd-oci-chart-kv-credential/     <- ArgoCD OCI Helm chart with key-vault-synced repo credential (split-application pattern)
     aks-bastion-live-access/            <- live kubectl access to a private AKS cluster via az aks bastion tunnel
     cortex-k8s-scan-trigger/            <- force and watch a Cortex Kubernetes connector host scan
@@ -386,6 +387,7 @@ The `.gitignore` covers these but worth being explicit:
 | Vault & Memory Hygiene | `/vault-memory-hygiene` | On-demand periodic check: orphaned/broken memory links, unarchived closed plans, one-directional vault backlinks |
 | Terraform Private Endpoint Import | `/terraform-private-endpoint-import` | Import a VNet-only resource via the MR pipeline's network-connected runner |
 | Azure Hub Firewall Diagnostics | `/azure-hub-firewall-diagnostics` | Diagnose silent outbound HTTPS failures from a spoke subnet (hub firewall IP-Group checklist) |
+| apt Stale Partial Index | `/apt-stale-partial-index` | apt-get update fails on one repo with 'File has unexpected size' while curl is fine; stale file in lists/partial |
 | ArgoCD OCI Chart KV Credential | `/argocd-oci-chart-kv-credential` | Deploy a private OCI Helm chart via ArgoCD with a key-vault-synced credential; split-application pattern |
 | AKS Bastion Live Access | `/aks-bastion-live-access` | Live kubectl access to a private AKS cluster via `az aks bastion` backgrounded tunnel + device-code sign-in |
 | Cortex K8s Scan Trigger | `/cortex-k8s-scan-trigger` | Force a Cortex Kubernetes connector host scan now and watch it complete |
